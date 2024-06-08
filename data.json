@@ -1,78 +1,13 @@
 {
   "instructors": [
     {
-      "name": "KIRA E A JUSTIÇA",
-      "avatar_url": "https://phito",
-      "birth": null,
+      "id": 1,
+      "name": "aristoteles",
+      "avatar_url": "http:/gohan.com.br",
+      "birth": 877478400000,
       "gender": "on",
-      "services": "LUTA",
-      "created_at": 1715458169664
-    },
-    {
-      "name": "KIRA E A JUSTIÇA '0",
-      "avatar_url": "https://phito",
-      "birth": null,
-      "gender": "on",
-      "services": "LUTA",
-      "created_at": 1715458181273
-    },
-    {
-      "name": "PICOLO",
-      "avatar_url": "https://phito",
-      "birth": null,
-      "gender": "on",
-      "services": "LUTA",
-      "created_at": 1715458201906
-    },
-    {
-      "name": "PICOLO",
-      "avatar_url": "https://phito",
-      "birth": null,
-      "gender": "on",
-      "services": "LUTA",
-      "created_at": 1715458249167
-    },
-    {
-      "name": "PICOLO",
-      "avatar_url": "https://phito",
-      "birth": null,
-      "gender": "on",
-      "services": "LUTA",
-      "created_at": 1715458253070
-    },
-    {
-      "name": "aaaa",
-      "avatar_url": "https://phito",
-      "birth": 6,
-      "gender": "on",
-      "services": "LUTA",
-      "created_at": 1715458360606
-    },
-    {
-      "name": "aaaa",
-      "avatar_url": "https://phito",
-      "birth": 7,
-      "gender": "on",
-      "services": "LUTA",
-      "created_at": 1715458363829
-    },
-    {
-      "name": "aaaa",
-      "avatar_url": "https://phito",
-      "birth": -20071065600000,
-      "gender": "on",
-      "services": "LUTA",
-      "created_at": 1715458407487,
-      "id": 8
-    },
-    {
-      "name": "aaaa",
-      "avatar_url": "https://phito",
-      "birth": -20071065600000,
-      "gender": "on",
-      "services": "LUTA",
-      "created_at": 1715458412230,
-      "id": 9
+      "services": "mma",
+      "created_at": 1717876197950
     }
   ]
 }

@@ -9,15 +9,14 @@ exports.post = function(req,res){
                 return res.send ("formulario invalido")
             }
         }
-        req.body.created_at = Date.now()
-        req.body.birth = Date.parse(req.body.birth)
-        req.body.id = Number (data.instructors.length)+1
-
-       let {avatar_url,gender,services,created_at,id} = req.body
+      
+       let {name,avatar_url,gender,services,created_at,id,birth} = req.body
        
-       birth = Date.parse(birth)
+       birth = Date.parse(req.body.birth)
        created_at = Date.now()
-       id = Number (data.instructors.length)
+       id = Number (data.instructors.length)+1
+
+       data.instructors.push ({id,name,avatar_url, birth, gender,services,created_at})
 
 
 
@@ -28,9 +27,16 @@ exports.post = function(req,res){
      })
 
      }
-        
-    
+        exports.show = function(req,res){
+          const {id} = req.params
 
+          const foundInstructor = data.instructors.find ( function(instructor){
+            return instructor.id == id
+          })
+
+          if(!foundInstructor) return res.send ( "instructor não encontrado")
+            return res.render ("instructors/show", {instructor:foundInstructor})
+          }
    
     
 
