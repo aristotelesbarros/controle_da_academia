@@ -2,6 +2,7 @@
 const fs = require("fs")
 const data = require ("./data.json")
 const { create } = require("browser-sync")
+const {age} = require("./utils")
 
 exports.post = function(req,res){
         const keys = Object.keys (req.body)
@@ -38,14 +39,16 @@ exports.post = function(req,res){
 
           if(!foundInstructor) return res.send ( "instructor não encontrado")
 
-        const instructor = {
+        
+
+           const instructor = {
           ...foundInstructor,
-          birth: '',
-          created_at:'' 
+          birth: age(foundInstructor.birth)+ "anos",
+          created_at: new Intl.DateTimeFormat("pt-br").format(foundInstructor.created_at),
         }
 
 
-            return res.render ("instructors/show", {instructor:foundInstructor})
+            return res.render ("instructors/show", {instructor})
           }
    
     
