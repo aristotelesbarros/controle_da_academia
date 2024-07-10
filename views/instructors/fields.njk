@@ -1,6 +1,9 @@
 <div class=" item">
         <div>NOME DO INSTRUTOR</div>
-        <input type="text" name="name" placeholder="Nome Completo" value='{{instructor.name}}' = >
+        <input type="text" name="name" placeholder="Nome Completo" value='{{instructor.name}}' >
+       
+      {% include 'instructors/fields.njk' %}
+
       </div>
 
       <div class=" item">
@@ -35,10 +38,10 @@
       </div>
 
       <div class=" item">
-        <div>Especialidades ( separe por virgula)
+        <div>Especialidades
         </div>
         <div>
-          <input type="text" name="services">
+          <input type="text" name="services" placeholder="separe por virgula"= value= '{{instructor.services}}'>
 
         </div>
 

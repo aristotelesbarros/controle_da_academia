@@ -38,10 +38,9 @@ exports.post = function(req,res){
           })
 
           if(!foundInstructor) return res.send ( "instructor não encontrado")
+          Date(foundInstructor.birth)
 
-        
-
-           const instructor = {
+      const instructor = {
           ...foundInstructor,
           birth: age(foundInstructor.birth)+ "anos",
           created_at: new Intl.DateTimeFormat("pt-br").format(foundInstructor.created_at),
@@ -50,13 +49,8 @@ exports.post = function(req,res){
 
             return res.render ("instructors/show", {instructor})
           }
-   
-    
-
-
-
-        
-        exports.editNow = function(req,res){
+  
+          exports.editNow = function(req,res){
           const {id} = req.params
 
           const foundInstructor = data.instructors.find ( function(instructor){
@@ -65,9 +59,7 @@ exports.post = function(req,res){
           })
 
           if(!foundInstructor) return res.send ( "instructor não encontrado")
-
-        
-            return res.render ("instructors/edit", {instructor:foundInstructor})
+             return res.render ("instructors/edit", {instructor:foundInstructor})
           }
    
     
