@@ -60,6 +60,7 @@ exports.post = function(req,res){
 
           if(!foundInstructor) return res.send ( "instructor não encontrado")
              return res.render ("instructors/edit", {instructor:foundInstructor})
+            
           }
    
     

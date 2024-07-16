@@ -22,6 +22,9 @@
     routes.get ('/create',function(req,res){
         return res.render ("instructors/create")
     })
+          
+       routes.get('/instructors/edit/:id', instructors.editNow)
+
 
        routes.get('/instructors/:id/edit', instructors.editNow)
        routes.get('/instructors/', instructors.show)
