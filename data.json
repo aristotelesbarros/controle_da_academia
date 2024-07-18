@@ -2,77 +2,30 @@
   "instructors": [
     {
       "id": 1,
-      "name": "KIRA E A JUSTIÇA",
-      "avatar_url": "https://phito",
-      "birth": 873072000000,
+      "name": "julio",
+      "avatar_url": "http://ww.www.ww",
+      "birth": 875318400000,
       "gender": "on",
-      "services": "LUTA",
-      "created_at": 1718479176609
+      "services": "luta",
+      "created_at": 1721335557873
     },
     {
       "id": 2,
-      "name": "SUKUNA",
-      "avatar_url": "http://sukuna.com.br",
-      "birth": 866937600000,
+      "name": "julio",
+      "avatar_url": "http://ww.www.ww",
+      "birth": 875318400000,
       "gender": "on",
-      "services": "taijutsu",
-      "created_at": 1718913779188
+      "services": "luta",
+      "created_at": 1721335701400
     },
     {
       "id": 3,
-      "name": "SUKUNA",
-      "avatar_url": "http://sukuna.com.br",
-      "birth": 837129600000,
-      "gender": "on",
-      "services": "taijutsu",
-      "created_at": 1718913836191
-    },
-    {
-      "id": 4,
-      "name": "ARIBABA",
-      "avatar_url": "http://sukuna.com.br",
-      "birth": 839808000000,
-      "gender": "on",
-      "services": "LUTA",
-      "created_at": 1718914221679
-    },
-    {
-      "id": 5,
-      "name": "picolo",
-      "avatar_url": "http://sukuna.com.br",
-      "birth": 868665600000,
-      "gender": "on",
-      "services": "LUTA",
-      "created_at": 1718914445944
-    },
-    {
-      "id": 6,
-      "name": "JUJUBA",
-      "avatar_url": "http://sukuna.com.br",
-      "birth": 868665600000,
-      "gender": "on",
-      "services": "LUTA",
-      "created_at": 1718915620444
-    },
-    {
-      "id": 7,
-      "birth": null,
-      "created_at": 1720644916939
-    },
-    {
-      "id": 8,
-      "birth": null,
-      "created_at": 1720644926481
-    },
-    {
-      "id": 9,
-      "birth": null,
-      "created_at": 1721161281079
-    },
-    {
-      "id": 10,
-      "birth": null,
-      "created_at": 1721161309181
+      "name": "juju",
+      "avatar_url": "https://www",
+      "birth": 901497600000,
+      "gender": "M",
+      "services": "maca",
+      "created_at": 1721335792425
     }
   ]
 }

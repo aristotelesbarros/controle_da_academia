@@ -8,14 +8,14 @@
 
       <div class=" item">
         <div>SUA FOTO</div>
-        <input type="url" name="avatar_url" placeholder="link da Foto">
+        <input type="url" name="avatar_url" placeholder="link da Foto" value='{{instructor.avatar_url}}' >
       </div>
 
       <div class=" item">
         <div>
           data de nascimento</div>
         <div>
-          <input type="date" name="birth">
+          <input type="date" name="birth"  value='{{instructor.birth}}'>
         </div>
 
       </div>
@@ -23,14 +23,14 @@
       <div class=" item">
         <div>qual sua sexualidade ?</div>
         <div>
-          <span><input type="radio" name="gender" volue="M" checked="checked">
+          <span><input type="radio" name="gender" value="M" {% if instructor.gender == 'M' %} checked {% endif %}>
             MASCULINO</span>
-          <span><input type="radio" name="gender" volue="F" checke="checke">
+          <span><input type="radio" name="gender" value="F" {% if instructor.gender == 'F' %} checked {% endif %}>
             FEMENINO</span>
-          <span><input type="radio" name="gender" volue="O" checke="checke">OUTRO</span>
-          <span><input type="radio" name="gender" volue="T" checke="checke">
+          <span><input type="radio" name="gender" value="O" {% if instructor.gender == 'O' %} checked {% endif %}>OUTRO</span>
+          <span><input type="radio" name="gender" value="T" {% if instructor.gender == 'T' %} checked {% endif %}>
             TRANSGENERO</span>
-          <span><input type="radio" name="gender" volue="N" checke="checke">
+          <span><input type="radio" name="gender" value="N" {% if instructor.gender == 'N' %} checked {% endif %}>
             NÃO BINANRIO</span>
 
         </div>
