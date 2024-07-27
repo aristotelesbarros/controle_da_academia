@@ -1,67 +1,68 @@
-
-const fs = require("fs")
+// Funções da pagina de instrutores
+const fs = require ("fs")
 const data = require ("./data.json")
-const { create } = require("browser-sync")
-const {age} = require("./utils")
+const {age,date} = require ('./utils')
+const { name } = require("browser-sync")
+
 
 exports.post = function(req,res){
-        const keys = Object.keys (req.body)
-        for (key of keys){
-            if (req.body[key] == ""){
-                return res.send ("formulario invalido")
-            }
-        }
-      
-       let {name,avatar_url,gender,services,created_at,id,birth} = req.body
        
-       birth = Date.parse(req.body.birth)
-       created_at = Date.now()
-       id = Number (data.instructors.length)+1
+    const keys = Object.keys (req.body)
+     for(key of keys){
+       if(req.body[key]==""){
+           return res.send ("preencha o form")
+       }
+     }
+      let {name,avatar_url,birth,gender,services,created_at} = req.body
 
-       data.instructors.push ({id,name,avatar_url, birth, gender,services,created_at})
+    
+     birth = Date.parse(req.body.birth)
+     created_at = Date.now()
+     id = Number (data.instructors.length)+1
 
-
+        data.instructors.push ({id,name,avatar_url,birth,gender,services,created_at})
 
      fs.writeFile("data.json",JSON.stringify(data,null,2),function(err){
-       if (err) return res.send("erro ao salvar o arquivo")
-     return res.redirect ("/instructors")
-    
-     })
+        if (err) return res.send("erro ao salvar o arquivo")
+            return res.redirect ("/instructors")
+       })
+   }
 
-     }
-        exports.show = function(req,res){
-          const {id} = req.params
+exports.show = function (req,res){
+    const {id} = req.params
 
-          const foundInstructor = data.instructors.find ( function(instructor){
-            return instructor.id == id
-          
-          })
+    const foundInstructor = data.instructors.find (function(instructor){
+        return instructor.id == id
+    })
 
-          if(!foundInstructor) return res.send ( "instructor não encontrado")
-          Date(foundInstructor.birth)
+    if(!foundInstructor) return res.send ("instrutor não encontrado")
 
-      const instructor = {
-          ...foundInstructor,
-          birth: age(foundInstructor.birth)+ "anos",
-          created_at: new Intl.DateTimeFormat("pt-br").format(foundInstructor.created_at),
-        }
+       const instructor= {
+        ...foundInstructor,
+        birth: age(foundInstructor.birth) + "anos",
+        created_at: new Intl.DateTimeFormat("pt-br").format(foundInstructor.created_at)
+       }
+
+        return res.render ("instructors/show",{instructor})
+   }
 
 
-            return res.render ("instructors/show", {instructor})
-          }
-  
-          exports.editNow = function(req,res){
-          const {id} = req.params
+exports.editNow = function (req,res){
+    const {id} = req.params
 
-          const foundInstructor = data.instructors.find ( function(instructor){
-            return instructor.id == id
-          
-          })
+    const foundInstructor = data.instructors.find (function(instructor){
+        return instructor.id == id
+    })
 
-          if(!foundInstructor) return res.send ( "instructor não encontrado")
-             return res.render ("instructors/edit", {instructor:foundInstructor})
-            
-          }
-   
-    
+    if(!foundInstructor) {
+    return res.send ("instrutor não encontrado")}
+
+      const instructor ={
+        ...foundInstructor,
+        birth: date (foundInstructor.birth)
+        
+      }
+      date(foundInstructor.birth)
+      return res.render ("instructors/edit",{instructor})
+   }
 

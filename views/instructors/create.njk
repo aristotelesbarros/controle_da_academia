@@ -1,16 +1,18 @@
-{% extends "layout.njk" %}
+ {% extends "layout.njk" %}
 
     {% block content %}
 
     <form class="card" method="post" action="/instructors">   
-    <section class="avatar" style="  background: url(https://source.unsplash.com/collection/3465564/1080x1920) no-repeat center center / cover ">       
+    <section class="avatar" style="  background: url(https://is.zobj.net/image-server/v1/images?r=UD9hTgpeGPh1tEemvTGx-dawMJeoRX7fi77Woc956tvCcsx0-3HOqIctPfO_yfqERIaIeG923AJRQNamZWY59EdMjvDBsTj9eiEtoWTrCv1VQh3WKk7ZV7LzDgrxXA7VEizqWaS8MTl5WagsvmAb3izsO_CwEAOoyQeJQbSEgYagG8zsbwX9sGdzRiATqLwHmtR4siEcB6zG-01WoSTD7ZpMGW9kDdMK_AX0LGDA0NqY4SnCuOVOy_T-X8k) no-repeat center center / cover ">       
     </section>
       <section class="details">
         <h3> CADASTRO DO INSTRUTOR </h3>
-          {% include 'instructors/fields.njk' %}
+           {% include 'instructors/fields.njk' %}
         
-        <button type="submit">FINALIZAR</button>
+        
       </section>  
     </form>
 
     {% endblock %}
+
+    

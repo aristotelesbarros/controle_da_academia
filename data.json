@@ -3,29 +3,20 @@
     {
       "id": 1,
       "name": "julio",
-      "avatar_url": "http://ww.www.ww",
-      "birth": 875318400000,
-      "gender": "on",
+      "avatar_url": "http://sukuna.com.br",
+      "birth": 877478400000,
+      "gender": "T",
       "services": "luta",
-      "created_at": 1721335557873
+      "created_at": 1722048610229
     },
     {
       "id": 2,
-      "name": "julio",
-      "avatar_url": "http://ww.www.ww",
-      "birth": 875318400000,
-      "gender": "on",
+      "name": "GOKU",
+      "avatar_url": "http://gohan.com.br",
+      "birth": 958953600000,
+      "gender": "O",
       "services": "luta",
-      "created_at": 1721335701400
-    },
-    {
-      "id": 3,
-      "name": "juju",
-      "avatar_url": "https://www",
-      "birth": 901497600000,
-      "gender": "M",
-      "services": "maca",
-      "created_at": 1721335792425
+      "created_at": 1722052394525
     }
   ]
 }
