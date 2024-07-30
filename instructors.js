@@ -66,3 +66,12 @@ exports.editNow = function (req,res){
       return res.render ("instructors/edit",{instructor})
    }
 
+exports.put = function(req,res){
+    const {id} = req.body
+    let index = 0
+    
+    const foundInstructor = data.instructors.find(function(instructor,foundInstructor){
+        if (id == instructor.id){
+            index = foundInstructor}
+        })
+    }
