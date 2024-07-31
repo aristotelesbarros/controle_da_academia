@@ -1,13 +1,12 @@
 {
   "instructors": [
     {
-      "id": 1,
-      "name": "julio",
+      "name": "kurama",
       "avatar_url": "http://sukuna.com.br",
       "birth": 877478400000,
       "gender": "T",
       "services": "luta",
-      "created_at": 1722048610229
+      "id": "1"
     },
     {
       "id": 2,
@@ -17,6 +16,15 @@
       "gender": "O",
       "services": "luta",
       "created_at": 1722052394525
+    },
+    {
+      "id": 3,
+      "name": "saitama",
+      "avatar_url": "http://sukuna.com.br",
+      "birth": 902880000000,
+      "gender": "F",
+      "services": "luta",
+      "created_at": 1722396071271
     }
   ]
 }
